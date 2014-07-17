@@ -12,7 +12,6 @@ function Car(make, model, color) {
   this.passengers = [];
 }
 
-
 Car.prototype.sale = function(newOwner) {
   this.previousOwners.push(this.currentOwner);
   this.currentOwner = newOwner;
@@ -80,11 +79,9 @@ Car.prototype.dropOff = function(friend) {
   }
 };
 
-
 module.exports = Car;
 
 // eval(locus);
-
 
 
 

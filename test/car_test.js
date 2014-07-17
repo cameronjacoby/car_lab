@@ -1,10 +1,10 @@
 // test/car_test.js
 
-var Car = require('../src/car.js'),
+var Car = require('../src/car.js'), // use the chai library with mocha
+// chai is an assertion library
   expect = require('chai').expect;
 
-
-describe('Car', function(){
+describe('Car', function(){ // describe is a group of tests we want to run for a feature
 
   var myCar;
 
@@ -27,7 +27,7 @@ describe('Car', function(){
 
   describe('#previousOwners', function(){
     it('should initially be empty', function(){
-      expect(myCar.previousOwners).to.eql([]);
+      expect(myCar.previousOwners).to.be.empty;
     });
   });
 
@@ -39,14 +39,19 @@ describe('Car', function(){
 
   describe('#passengers', function(){
     it('should initially be empty', function(){
-      expect(myCar.passengers).to.eql([]);
+      expect(myCar.passengers).to.be.empty;
     });
   });
 
   describe('#sale', function(){
-    it('should move currentOwner to previousOwners and update currentOwner with the new owner', function(){
+
+    it('should move currentOwner to previousOwners array', function(){
       myCar.sale('Cameron');
       expect(myCar.previousOwners).to.eql(['manufacturer']);
+    });
+
+    it('should update currentOwner with the new owner', function(){
+      myCar.sale('Cameron');
       expect(myCar.currentOwner).to.equal('Cameron');
     });
   });
@@ -103,9 +108,8 @@ describe('Car', function(){
     });
 
     it('should not modify the passengers array if car is off', function(){
-      myCar.off();
       myCar.pickUp('Bob');
-      expect(myCar.passengers).to.eql([]);
+      expect(myCar.passengers).to.be.empty;
     });
   });
 
@@ -114,7 +118,7 @@ describe('Car', function(){
       myCar.start();
       myCar.pickUp('Bob');
       myCar.dropOff('Bob');
-      expect(myCar.passengers).to.eql([]);
+      expect(myCar.passengers).to.be.empty;
     });
 
     it('should leave passenger in the passengers array if car is off', function(){
@@ -127,8 +131,6 @@ describe('Car', function(){
   });
 
 });
-
-
 
 
 
