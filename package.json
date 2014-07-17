@@ -1,8 +1,8 @@
 {
-  "name": "apartment_lab",
+  "name": "car_lab",
   "version": "0.0.1",
   "description": "a lab for playing with constructors and prototypes in JS",
-  "main": "index.js",
+  "main": "car.js",
   "directories": {
     "test": "test"
   },
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wdi-sf-july/apartment_lab.git"
+    "url": "https://github.com/cameronjacoby/car_lab"
   },
-  "author": "",
+  "author": "Cameron Jacoby",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/wdi-sf-july/apartment_lab/issues"
+    "url": "https://github.com/cameronjacoby/car_lab"
   },
-  "homepage": "https://github.com/wdi-sf-july/apartment_lab",
+  "homepage": "https://github.com/cameronjacoby/car_lab",
   "dependencies": {
     "chai": "^1.9.1",
     "mocha": "^1.20.1"
