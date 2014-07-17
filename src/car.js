@@ -53,6 +53,9 @@ Car.prototype.pickUp = function(friend) {
     console.log('Driving to pick up ' + friend + '.');
     this.passengers.push(friend);
   }
+  else {
+    console.log('Turn on your car before you can pick up ' + friend + '.');
+  }
 };
 
 Car.prototype.dropOff = function(friend) {
@@ -66,6 +69,14 @@ Car.prototype.dropOff = function(friend) {
     console.log('Dropping off ' + friend + '.');
     var friendIndex = this.passengers.indexOf(friend);
     this.passengers.splice(friendIndex, 1);
+  }
+  else {
+    if (this.state !== 'on') {
+      console.log('Turn on your car before you can drop off ' + friend + '.');
+    }
+    else if (inPassengers === false) {
+      console.log(friend + ' is not in your car.');
+    }
   }
 };
 
