@@ -1,7 +1,6 @@
 // require('locus');
 
 function Car(make, model, color) {
-
   this.make = make;
   this.model = model;
   this.year = new Date().getFullYear();

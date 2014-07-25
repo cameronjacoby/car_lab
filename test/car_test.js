@@ -84,6 +84,7 @@ describe('Car', function(){ // describe is a group of tests we want to run for a
     });
 
     it('should return undefined', function(){
+      myCar.off();
       expect(myCar.driveTo('ikea')).to.equal(undefined);
     });
   });
